@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>---FORMULÁRIO DE CONTATO---</title>
+    <style>
+        body {
+    padding: 0;
+    margin: 0;
+}
+
+form {
+    font - family: Verdana, Tahoma, sans-serif;
+    font-size:  15px;
+    background: #CC6600;
+    max-width: 420px;
+}
+
+h1 { 
+    margin-bottom: : 20px;
+    margin-left: 20px;
+    color: #56FFFF;
+    text-shadow: 5px 5px 5px black;
+}
+
+input: hover, textarea:hover, input:focus, textarea:focus {
+    border-color: #000066;
+    box-shadow: 5px 0px 9px #FFFF00;
+    background-color: #66FFFF;
+    color: black;
+    font-weight: bold;
+}
+
+.submit input {
+    background-color: #66FFFF;
+    height: 40px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border: 1px solid;
+    color: black;
+}
+
+textarea {
+    width: 400px;
+    height: 120px
+    line-height: 20px
+    max-width: 400px;
+}
+
+form label {
+    margin-left: 20px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+    </style>
+
+</head>
+    <script>
+        function Enviar() {
+    var nome = document.getElementById('nomeid');
+
+    if (nome.value != '') {
+        alert ('Obrigado Sr(a) ' + nome.value + ', os seus dados foram encaminhados com sucesso');
+    }
+}
+    </script>
+<body> 
+    <form name = 'meu_form'>
+        <h1>ENTRE EM CONTATO</h1>
+            <input type= 'nome' id= 'nomeid' placeholder = 'Digite seu nome' required= 'required' name= 'nome'/>
+            <label for= 'nome'>Nome</label>
+        <p>
+            <p class = 'fone'>
+                <input type= 'text' id= 'foneid' placeholder= '(xx) xxxxx-xxxx' name= 'fone' />
+                <label for= 'fone'>Fone</label>
+        </p>
+        <p>
+                <input type= 'email' id= 'emailid' placeholder= 'Digite seu e-mail' name= 'email' />
+                <label for= 'email'>Email</label>
+        </p>
+        <p>
+            <textarea placeholder= 'Deixe sua opinião'></textarea>
+        </p>
+        <p class= 'submit'>
+            <input type= 'submit' onclick= 'Enviar();' value= 'Enviar'/>
+        </p>
+    </form>
+  
+</body>
+</html>
